@@ -25,6 +25,19 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 app.get("/", handleHome);
+app.get("/pocket")
+app.get("/addStore")
+app.get("/storeDetail")
+app.get("/edit_store")
 
-app.get("/profile", handleProfile);
+app.get("/search")
+
+app.get("/user", handleProfile);
+app.get("/login")
+app.get("/logout")
+app.get("/edit")
+app.get("/password")
+
 app.listen(PORT, handleListening);
+
+export default app;
