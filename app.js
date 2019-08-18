@@ -18,9 +18,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(helmet());
 app.use(morgan("dev"));
 
-app.get("/", globalRouter);
-app.get("/store", storeRouter);
-app.get("/user", userRouter);
+app.use("/", globalRouter);
+app.use("/store", storeRouter);
+app.use("/user", userRouter);
 
 
 export default app;
